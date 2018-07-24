@@ -3,7 +3,7 @@
 
 
 int main() {
-    const hlt::Metadata metadata = hlt::initialize("Kim Uyen");
+    const hlt::Metadata metadata = hlt::initialize("UyenKim");
     const hlt::PlayerId player_id = metadata.player_id;
 
     const hlt::Map& initial_map = metadata.initial_map;
@@ -48,7 +48,7 @@ int main() {
                 }
 
                 const hlt::possibly<hlt::Move> move =
-                        hlt::navigation::navigate_ship_to_dock(map, ship, planet, hlt::constants::MAX_SPEED / 2);
+                        hlt::navigation::navigate_ship_to_dock(map, ship, planet, hlt::constants::MAX_SPEED);
                 if (move.second) {
                     moves.push_back(move.first);
                 }
